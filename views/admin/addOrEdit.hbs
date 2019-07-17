@@ -1,0 +1,57 @@
+<h3>{{viewTitle}}</h3>
+<style>
+    label{
+        color: aliceblue
+    }
+    h3{
+        color:cadetblue
+    }
+    form{
+        margin-left: 200px;
+        margin-right: 200px;
+        width: 400px;
+    }
+</style>
+<!--Adding and Editing admin users -->
+<form autocomplete="off" action="/admin" method="POST">
+ <div class="form-group">
+     <label>Fullname :</label>
+     <input type="text" class="form-control" name="fullname" placeholder="Enter your full name" value="{{adminss.fullname}}">
+     <div class="text-danger">
+         {{admin.fullNameError}}
+     </div>
+ </div>
+ <div class="form-group">
+     <label>Email :</label>
+     <input type="text" class="form-control" name="email" placeholder="Enter your email" value="{{adminss.email}}">
+     <div class="text-danger">
+         {{admin.emailError}}
+     </div>
+ </div>
+ <div class="form-row">
+ <div class="form-group col-md-6">
+     <label>Mobile no.:</label>
+     <input type="text" class="form-control" name="mobile" placeholder="Enter your mobile no." value={{adminss.mobile}}>
+      <div class="text-danger">
+         {{admin.mobileError}}
+     </div>
+ </div>
+ <div class="form-group col-md-6">
+     <label>Password:</label>
+     <input type="password" class="form-control" name="password" placeholder="Enter your password" value={{adminss.password}}>
+      <div class="text-danger">
+         {{admin.passwordError}}
+     </div>
+ </div>
+ </div>
+ <div class="form-group">
+     <button type="submit" class="btn btn-primary">
+         <i class="fa fa-database"></i>
+         Submit
+     </button>
+ </div>
+ <a href="/login">Already registerd?Click here</a>
+</form>
+
+
+<!--Now return the view as a response to request in"adminController.js"-->

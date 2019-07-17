@@ -1,0 +1,43 @@
+<h3>{{viewTitle}}</h3>
+<style>
+    h3{
+        color: blanchedalmond
+    }
+    label{
+          color: white
+    }
+    form{
+        margin-left: 250px;
+        margin-right: 250px;
+        width: 350px
+    }
+</style>
+<!--Adding and Editing admin users -->
+<form autocomplete="off" action="/admin" method="POST">
+<div class="form-group">
+    <label>Roll No :</label>
+    <input type="text" class="form-control" name="rollno" placeholder="Enter your college roll no">
+</div>
+<div class="form-group">
+    <label>Exam Id :</label>
+    <input type="text" class="form-control" name="examid" placeholder="Enter id for your desired exam">
+</div>
+<div class="form-group">
+    <label>Subject :</label>
+    <input type="text" class="form-control" name="subject" placeholder="Enter the subject">
+</div>
+<div class="form-group">
+    <label>Point :</label>
+    <input type="number" class="form-control" name="point" placeholder="Enter the points earned">
+</div>
+<div class="form-group">
+    <label>Grade :</label>
+    <input type="text" class="form-control" name="grade" placeholder="Enter grade obtained for subject">
+</div>
+<div class="form-group">
+     <button type="submit" class="btn btn-primary">
+         <i class="fa fa-database"></i>
+         Submit
+     </button>
+ </div>
+</form>

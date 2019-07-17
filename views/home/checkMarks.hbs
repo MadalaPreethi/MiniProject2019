@@ -1,0 +1,109 @@
+<h3>{{viewTitle}}</h3>
+<style>
+    h3{
+        color:antiquewhite
+    }
+    label{
+        color: aquamarine
+    }
+    form{
+        margin-left: 200px;
+        margin-right: 200px;
+        width:300px;
+    }
+    table{
+        background-color: azure
+    }
+</style>
+        <section>
+            <div class="jumbotron" style="color:black">
+                <h4>Some rules to make your search easy..!</h4>
+                <h4>
+                    College Id:-
+                </h4>
+                <p>
+                   1)Student's of CVR COLLEGE OF ENGINEERING , please enter your college id  that is assigned to you by your college.
+                </p>
+                <h4>
+                    Exam Id:-
+                </h4>
+                <p>
+                    Exam id is kind of a new thing but let me make it easy for you all to understand.
+                    <ol>
+                        <li>
+                           Exam id makes it easy for us to understand the exam results which you are looking for.
+                        </li>
+                        <li>
+                            Here we understand the exam type in the format x-y-z
+                        </li>
+                        <li>
+                            x: it tells us the year of the B.tech course
+                        </li>
+                        <li>
+                            y: tells the semester you are in.There are only 2 numbers.
+                            <ol>
+                                <li>
+                                    1:first sem of the corresponding B.Tech year
+                                </li>
+                                <li>
+                                    2:second sem of the corresponding B.Tech year
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            z:tells the mid or sem exam you are talking about.There are 3 no.
+                            <ol>
+                                <li>
+                                    1: First mid
+                                </li>
+                                <li>
+                                    2: Second mid
+                                </li>
+                                <li>
+                                    3: Semester exam
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </p>
+            </div>
+        </section>
+<br/><br/>
+<form  autocomplete="on" method="POST">
+ <div class="form-group">
+     <label>Roll no : </label>
+     <input type="text" class="form-control" name="rolls" placeholder="Enter your college id">
+ </div>
+  <div class="form-group">
+     <label>Exam id : </label>
+     <input type="text" class="form-control" name="exams" placeholder="Enter required exam id">
+    </div>
+     <div class="form-group">
+     <button type="submit" class="btn btn-success"> 
+         <i class="fa fa-database"></i>
+         Search
+     </button>
+ </div>
+ </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                <th>Subject</th>
+                <th>Point</th>
+                <th>Grade</th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.subject}}</td>
+            <td>{{this.point}}</td>
+            <td>{{this.grade}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
